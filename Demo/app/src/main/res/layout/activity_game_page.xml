@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background" />
+
+    <TextView
+        android:id="@+id/playerText"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="-106dp"
+        android:layout_marginTop="55dp"
+        android:text="Player Health"
+        android:textAlignment="center" />
+
+    <ImageView
+        android:id="@+id/healthbar"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/healthbar1" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="280dp"
+        android:gravity="center"
+        >
+        <ImageView
+            android:id="@+id/moneyBag"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:src="@drawable/money_bag"
+            android:layout_alignParentEnd="true"
+            />
+        <TextView
+            android:id="@+id/moneyView"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="#040303"
+            android:text="100000"
+            android:textSize="20dp"
+            />
+    </LinearLayout>
+    <Button
+        android:id="@+id/BackButton"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="#8b7d6b"
+        android:textSize="16dp"
+        android:text="back"
+        />
+
+    <ImageView
+        android:id="@+id/towerImage"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="70dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/castle"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Stage "
+            android:textSize='25dp' />
+        <TextView
+            android:id="@+id/stageNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            android:text="1"
+            android:textSize='25dp' />
+    </LinearLayout>
+    <Button
+        android:id="@+id/nextStage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="162dp"
+        android:layout_marginEnd="161dp"
+        android:layout_marginBottom="347dp"
+        android:text="Next Stage"
+        android:backgroundTint="#8b7d6b"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/startcombat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#8b7d6b"
+        android:text="Start Combat" />
+
+    <Button
+        android:id="@+id/upgrade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/startcombat"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#AF7d6b"
+        android:text="Upgrade"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/path"
+        android:layout_width="70dp"
+        android:layout_height="510dp"
+        android:layout_below="@+id/towerImage"
+        android:layout_centerInParent="true"
+        android:background="@drawable/path1"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/turret1"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/towerImage"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/grass_tile"
+        />
+    <ImageView
+        android:id="@+id/turret2"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="70dp"
+        android:background="@drawable/grass_tile"
+        android:layout_below="@+id/turret1"
+        />
+    <ImageView
+        android:id="@+id/turret3"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/grass_tile"
+        android:layout_below="@+id/turret2"
+        />
+    <ImageView
+        android:id="@+id/turret4"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="70dp"
+        android:background="@drawable/grass_tile"
+        android:layout_below="@+id/turret3"
+        />
+
+    <ImageView
+        android:id="@+id/turret5"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/turret4"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/grass_tile" />
+    <ImageView
+        android:id="@+id/turret6"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/grass_tile"
+        android:layout_below="@+id/towerImage"
+        />
+    <ImageView
+        android:id="@+id/turret7"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="70dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/grass_tile"
+        android:layout_below="@+id/turret6"
+        />
+    <ImageView
+        android:id="@+id/turret8"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/grass_tile"
+        android:layout_below="@+id/turret7"
+        />
+    <ImageView
+        android:id="@+id/turret9"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="70dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/grass_tile"
+        android:layout_below="@+id/turret8"
+        />
+
+    <ImageView
+        android:id="@+id/turret10"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/turret9"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/grass_tile" />
+
+    <ImageView
+        android:id="@+id/turretLeft1"
+        android:layout_width="60dp"
+        android:layout_height="90dp"
+        android:layout_above="@+id/turret1"
+        android:layout_marginStart="23dp"
+        android:layout_marginBottom="-65dp"
+        android:src="@drawable/cannon_1_left"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/turretLeft1Projectile"
+        android:layout_width="20dp"
+        android:layout_height="10dp"
+        android:layout_above="@+id/turretLeft1"
+        android:layout_marginStart="45dp"
+        android:layout_marginBottom="-20dp"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/turretLeft2"
+        android:layout_width="60dp"
+        android:layout_height="90dp"
+        android:layout_above="@+id/turret2"
+        android:layout_marginStart="84dp"
+        android:layout_marginBottom="-45dp"
+        android:src="@drawable/cannon_1_left"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/turretLeft2Projectile"
+        android:layout_width="20dp"
+        android:layout_height="10dp"
+        android:layout_above="@+id/turretLeft2"
+        android:layout_marginStart="106dp"
+        android:layout_marginBottom="-20dp"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/turretLeft3"
+        android:layout_width="60dp"
+        android:layout_height="90dp"
+        android:layout_above="@+id/turret3"
+        android:src="@drawable/cannon_1_left"
+        android:layout_marginStart="23dp"
+        android:layout_marginBottom="-45dp"
+        android:visibility="invisible"
+        />
+    <ImageView
+        android:id="@+id/turretLeft3Projectile"
+        android:layout_width="20dp"
+        android:layout_height="10dp"
+        android:layout_above="@+id/turretLeft3"
+        android:layout_marginStart="45dp"
+        android:layout_marginBottom="-20dp"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/turretLeft4"
+        android:layout_width="60dp"
+        android:layout_height="90dp"
+        android:layout_above="@+id/turret4"
+        android:layout_marginStart="84dp"
+        android:layout_marginBottom="-45dp"
+        android:src="@drawable/turret1_left"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/turretLeft4Projectile"
+        android:layout_width="20dp"
+        android:layout_height="10dp"
+        android:layout_above="@+id/turretLeft4"
+        android:layout_marginStart="106dp"
+        android:layout_marginBottom="-20dp"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/turretLeft5"
+        android:layout_width="60dp"
+        android:layout_height="90dp"
+        android:layout_above="@+id/turret5"
+        android:layout_marginStart="23dp"
+        android:layout_marginBottom="-45dp"
+        android:src="@drawable/turret1_left"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/turretLeft5Projectile"
+        android:layout_width="20dp"
+        android:layout_height="10dp"
+        android:layout_above="@+id/turretLeft5"
+        android:layout_marginStart="45dp"
+        android:layout_marginBottom="-20dp"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/turretRight1"
+        android:layout_width="60dp"
+        android:layout_height="90dp"
+        android:layout_above="@+id/turret1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="-65dp"
+        android:src="@drawable/cannon_1_right"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/turretRight1Projectile"
+        android:layout_width="20dp"
+        android:layout_height="10dp"
+        android:layout_above="@+id/turretRight1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="-20dp"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/turretRight2"
+        android:layout_width="60dp"
+        android:layout_height="90dp"
+        android:layout_above="@+id/turret2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="84dp"
+        android:layout_marginBottom="-45dp"
+        android:src="@drawable/cannon_1_right"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/turretRight2Projectile"
+        android:layout_width="20dp"
+        android:layout_height="10dp"
+        android:layout_above="@+id/turretRight2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="110dp"
+        android:layout_marginBottom="-20dp"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/turretRight3"
+        android:layout_width="60dp"
+        android:layout_height="90dp"
+        android:layout_above="@+id/turret3"
+        android:src="@drawable/turret1_right"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="-45dp"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/turretRight3Projectile"
+        android:layout_width="20dp"
+        android:layout_height="10dp"
+        android:layout_above="@+id/turretRight3"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="-20dp"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/turretRight4"
+        android:layout_width="60dp"
+        android:layout_height="90dp"
+        android:layout_above="@+id/turret4"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="84dp"
+        android:layout_marginBottom="-45dp"
+        android:src="@drawable/turret1_right"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/turretRight4Projectile"
+        android:layout_width="20dp"
+        android:layout_height="10dp"
+        android:layout_above="@+id/turretRight4"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="110dp"
+        android:layout_marginBottom="-20dp"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/turretRight5"
+        android:layout_width="60dp"
+        android:layout_height="90dp"
+        android:layout_above="@+id/turret5"
+        android:src="@drawable/turret1_right"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="-45dp"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/turretRight5Projectile"
+        android:layout_width="20dp"
+        android:layout_height="10dp"
+        android:layout_above="@+id/turretRight5"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="-20dp"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/turret5"
+        android:visibility="invisible"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                >
+                <Button
+                    android:id="@+id/archerButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#AF7d6b"
+                    android:text="ARCHER"
+                    />
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/money_bag"
+                    android:layout_alignParentEnd="true"
+                    />
+                <TextView
+                    android:id="@+id/archerPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:text="1000"
+                    android:textSize="15dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                >
+                <Button
+                    android:id="@+id/cannonButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#AF7d6b"
+                    android:text="CANNON"
+                    />
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/money_bag"
+                    android:layout_alignParentEnd="true"
+                    />
+                <TextView
+                    android:id="@+id/cannonPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:text="1000"
+                    android:textSize="15dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                >
+                <Button
+                    android:id="@+id/iceButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#AF7d6b"
+                    android:text="ICE"
+                    />
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/money_bag"
+                    android:layout_alignParentEnd="true"
+                    />
+                <TextView
+                    android:id="@+id/icePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:text="1000"
+                    android:textSize="15dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/enemyText"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="280dp"
+        android:layout_marginLeft="-106dp"
+        android:layout_marginTop="55dp"
+        android:text="Enemy Health"
+        android:textAlignment="center" />
+
+    <View
+        android:id="@+id/enemyHealthBack"
+        android:layout_width="100dp"
+        android:layout_height="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="280dp"
+        android:layout_marginLeft="-106dp"
+        android:layout_marginTop="88dp"
+        android:background="@color/lb_grey" />
+
+    <View
+        android:id="@+id/enemyHealth"
+        android:layout_width="100dp"
+        android:layout_height="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="280dp"
+        android:layout_marginLeft="-106dp"
+        android:layout_marginTop="88dp"
+        android:background="#d90000" />
+
+    <ImageView
+        android:id="@+id/enemy"
+        android:layout_width="50dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/wario" />
+</RelativeLayout>
